@@ -1,0 +1,29 @@
+{
+  "name": "remark-preview",
+  "version": "0.0.2",
+  "description": "Adds a preview of markdown content to frontmatter",
+  "main": "index.js",
+  "type": "module",
+  "author": "Matt Jennings",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattjennings/remark-preview"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "remark": "^13.0.0"
+  },
+  "dependencies": {
+    "unist-util-visit": "^3.1.0",
+    "unist-util-visit-parents": "^4.1.1",
+    "hast-util-sanitize": "^4.0.0",
+    "hast-util-to-html": "^8.0.0",
+    "mdast-util-to-hast": "^11.1.1",
+    "truncate-html": "^1.0.4"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./text-formatter": "./text-formatter.js",
+    "./html-formatter": "./html-formatter.js"
+  }
+}
