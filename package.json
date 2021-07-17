@@ -1,6 +1,6 @@
 {
   "name": "remark-preview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds a preview of markdown content to frontmatter",
   "main": "index.js",
   "type": "module",
