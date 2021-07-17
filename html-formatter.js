@@ -28,8 +28,16 @@ export default function htmlFormatter({
       const node = {
         ...tree,
         children: maxBlocks
-          ? // remove frontmatter, get next X blocks
-            tree.children.filter((c) => c.type !== "yaml").slice(0, maxBlocks)
+          ? tree.children
+              // remove frontmatter, script blocks
+              .filter((c) => {
+                const isFrontmatter = c.type === "yaml";
+                const isScriptBlock =
+                  c.type === "html" && c.value.startsWith("<script");
+
+                return !isFrontmatter && !isScriptBlock;
+              })
+              .slice(0, maxBlocks)
           : tree.children,
       };
       let hast = sanitize(toHast(node));

@@ -13,12 +13,13 @@ import { sanitize } from "hast-util-sanitize";
 remark()
   .use(
     preview(
-      // htmlFormatter({
+      htmlFormatter({
+        // length: 70,
+        maxBlocks: 1,
+      })
+      // textFormatter({
       //   length: 70,
       // })
-      textFormatter({
-        length: 70,
-      })
     )
   )
   .process(fs.readFileSync("./test.md", "utf-8"), function (err, file) {
