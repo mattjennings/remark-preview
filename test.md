@@ -1,5 +1,3 @@
-<script>
-  asdf
-  </script>
+![image](./image.png)
 
 blahh
