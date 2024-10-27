@@ -4,11 +4,11 @@ import { visitParents } from "unist-util-visit-parents";
 /**
  * Formats the preview as plain text
  *
- * @param {object} options
- * @param {number} options.length - Max number of characters before truncating
- * @param {number} options.ellipsis - Adds an ellipsis to the end of the preview if necessasry.
+ * @param {object} [options]
+ * @param {number} [options.length] - Max number of characters before truncating
+ * @param {boolean} [options.ellipsis] - Adds an ellipsis to the end of the preview if necessasry.
  * @param {number} options.maxBlocks - Max number of block elements to include
- * @param {number} options.headings - Whether or not to include headings
+ * @param {boolean} [options.headings] - Whether or not to include headings
  */
 export default function textFormatter({
   length = 300,
